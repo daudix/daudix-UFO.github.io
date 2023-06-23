@@ -50,7 +50,10 @@
   --text2: rgba(255,255,255, 0.9);
   --text3: rgb(85, 85, 85);
   --text4: rgb(119, 119, 119);
-  --borders: rgba(120, 120, 120, 0.4);
+  --text5: rgb(170, 170, 170);
+  --border: rgba(120, 120, 120, 0.4);
+  --background-color: rgb(255,255,255);
+  --background-color-dark: rgb(36, 36, 36);
 
   --card-size: 12em; /* Used to conveniently scale cards */
 }
@@ -191,7 +194,7 @@ body {
 
 /* ## Project Cards */
 .card-project {
-  border: 1px solid var(--borders);
+  border: 1px solid var(--border);
   display: flex;
   justify-content: center;
   align-items: center;
@@ -273,3 +276,13 @@ body {
     background-color: var(--dark5);
   }
 }
+
+/* @media (prefers-color-scheme: dark) {
+  body {
+    background-color: var(--background-color-dark);
+  }
+
+  .project-title {
+    color: var(--text5);
+  }
+} */
