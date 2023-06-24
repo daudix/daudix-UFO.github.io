@@ -166,6 +166,10 @@ body {
   transform: scale(1.05);
 }
 
+.social-icon:active {
+  transform: scale(0.95);
+}
+
 /* ## Info Cards */
 .card-info {
   padding: 1em;
