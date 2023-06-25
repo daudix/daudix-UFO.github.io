@@ -1,8 +1,8 @@
 ![Screenshot](screenshot.png)
 
-# daudix-ufo.github.io
+# daudix.undo.it
 
-_Based on [bragefuglseth.github.io](https://github.com/bragefuglseth/bragefuglseth.github.io)_
+_Based on [bragefuglseth.dev](https://github.com/bragefuglseth/bragefuglseth.github.io)_
 
 This is my personal website, where I tell a little about myself, showcase my
 projects, and provide contact links. It has a contemporary and modular grid
