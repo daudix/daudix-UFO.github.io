@@ -82,7 +82,7 @@
 body {
   background-color: var(--dark5);
   background-image: url(img/curtain.png);
-  background-size: auto 100vh;
+  background-size: auto 100%;
   background-repeat: repeat-x;
   background-position: center;
   background-attachment: fixed;
