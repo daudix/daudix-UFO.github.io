@@ -25,6 +25,17 @@
     <meta property="og:image:height" content="500" />
     <meta property="og:image:alt" content="A simple representation of metaballs" />
 
+    <!-- <script>
+      function toggleInfo() {
+        var x = document.getElementById("info-text");
+        if (x.style.display === "none") {
+          x.style.display = "block";
+        } else {
+          x.style.display = "none";
+        }
+      } 
+    </script> -->
+
 
   </head>
   <body>
@@ -38,6 +49,11 @@
             <div class="project-about">
               <h2 class="project-title">Punchclock</h2>
             </div>
+
+            <p id="info-text" class="info-text">Placeholder for something interesting</p>
+
+            <a href="https://gitlab.com/floers/punchclock" title="Visit Project" class="button button-link"></a>
+            <a onclick="toggleInfo()" title="About Icon" class="button button-info"></a>
           </div>
 
           <div class="card card-square card-project">
