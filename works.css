@@ -48,12 +48,14 @@
 
   --text1: rgba(255,255,255, 0.8);
   --text2: rgba(255,255,255, 0.9);
-  --text3: rgb(85, 85, 85);
-  --text4: rgb(119, 119, 119);
-  --text5: rgb(170, 170, 170);
-  --border: rgba(120, 120, 120, 0.4);
+  --text3: rgb(85,85,85);
+  --text4: rgb(119,119,119);
+  --text5: rgb(170,170,170);
+  --border: rgba(120,120,120,0.4);
+  --popup: rgba(120,120,120,0.8);
   --background-color: rgb(255,255,255);
-  --background-color-dark: rgb(36, 36, 36);
+  --background-color-dark: rgb(36,36,36);
+  --background-overlay: rgba(0,0,0,0.4);
 
   --card-size: 12em; /* Used to conveniently scale cards */
 
@@ -81,13 +83,16 @@
 
 body {
   background-color: var(--dark5);
+}
+
+.curtain-container {
   background-image: url(img/curtain.png);
   background-size: auto 100%;
   background-repeat: repeat-x;
   background-position: center;
   background-attachment: fixed;
 
-  overflow-x: hidden;
+  overflow: hidden;
 
   animation-name: background-brightness;
   animation-duration: 2s;
@@ -104,7 +109,6 @@ body {
   background-size: auto 100vh;
   background-position: right top, left top;
   background-repeat: no-repeat;
-
   background-attachment: fixed;
 
   animation-name: curtain;
@@ -203,4 +207,91 @@ body {
 .project-description {
   font-size: 1rem;
   color: var(--text4);
+}
+
+.overlay {
+  position: fixed;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  background: var(--background-overlay);
+  backdrop-filter: blur(12px);
+  transition: opacity 400ms;
+  visibility: hidden;
+  opacity: 0;
+}
+
+.overlay:target {
+  visibility: visible;
+  opacity: 1;
+}
+
+.popup {
+  border: 1px solid var(--border);
+  background-color: var(--popup);
+  display: block;
+  justify-content: center;
+  align-items: center;
+  padding: 0 2.5em;
+  gap: 2em;
+  backdrop-filter: blur(12px);
+  transition: all 400ms ease-in-out;
+
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.popup-title {
+  font-size: 1.5rem;
+  font-weight: 900;
+  font-variation-settings: "wght" 900;
+  color: var(--dark5);
+  padding: 1em;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.popup-description {
+  font-size: 1rem;
+  color: var(--dark5);
+}
+
+.popup .close {
+  position: absolute;
+  top: 0.2em;
+  right: 0.6em;
+  transition: all 200ms;
+  font-size: 1.5em;
+  font-weight: bold;
+  text-decoration: none;
+  color: var(--dark5);
+}
+
+.popup .close:hover {
+  color: var(--dark3);
+}
+.popup .content {
+  max-height: 80%;
+  overflow: auto;
+  position: relative;
+}
+
+@media screen and (max-width: 650px){
+  .box{
+    width: 80%;
+  }
+  .popup{
+    width: 80%;
+  }
+}
+
+@media screen and (max-width: 350px){
+  .popup{
+    height: 80vh;
+  }
 }
