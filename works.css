@@ -118,7 +118,8 @@ body {
   background-attachment: fixed;
 
   animation-name: curtain-reveal;
-  animation-duration: 1s;
+  animation-duration: 2s;
+  animation-timing-function: ease-in-out;
 }
 
 @keyframes curtain-reveal {
@@ -146,15 +147,6 @@ body {
   display: flex;
   flex-wrap: wrap;
   gap: 1.5em;
-
-  animation-name: fade;
-  animation-duration: 2s;
-}
-
-@keyframes fade {
-  0%   {opacity: 0;}
-  50%  {opacity: 0;}
-  100% {opacity: 1;}
 }
 
 /* ## Global Card Styles */
@@ -185,9 +177,26 @@ body {
   align-items: center;
   padding: 0 2.5em;
   gap: 2em;
+
   backdrop-filter: blur(12px);
   -webkit-backdrop-filter: blur(12px);
+
+  animation: fade-in 4s forwards;
 }
+
+/* Let's define an animation: */
+@keyframes fade-in {
+  0% {
+    opacity: 0;
+  }
+  50% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
 
 .project-image {
   height: 64px;
@@ -216,7 +225,7 @@ body {
   color: var(--text4);
 }
 
-.overlay {
+/* .overlay {
   position: fixed;
   top: 0;
   bottom: 0;
@@ -303,4 +312,4 @@ body {
   .popup{
     height: 80vh;
   }
-}
+} */
