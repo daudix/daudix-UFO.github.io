@@ -1,0 +1,211 @@
+/* ## General Setup */
+:root {
+  --blue1: rgb(153,193,241);
+  --blue2: rgb(98,160,234);
+  --blue3: rgb(53,132,228);
+  --blue4: rgb(28,113,216);
+  --blue5: rgb(26,95,180);
+  --green1: rgb(143,240,164);
+  --green2: rgb(87,227,137);
+  --green3: rgb(51,209,122);
+  --green4: rgb(46,194,126);
+  --green5: rgb(38,162,105);
+  --yellow1: rgb(249,240,107);
+  --yellow2: rgb(248,228,92);
+  --yellow3: rgb(246,211,45);
+  --yellow4: rgb(245,194,17);
+  --yellow5: rgb(229,165,10);
+  --orange1: rgb(255,190,111);
+  --orange2: rgb(255,163,72);
+  --orange3: rgb(255,120,0);
+  --orange4: rgb(230,97,0);
+  --orange5: rgb(198,70,0);
+  --red1: rgb(246,97,81);
+  --red2: rgb(237,51,59);
+  --red3: rgb(224,27,36);
+  --red4: rgb(192,28,40);
+  --red5: rgb(165,29,45);
+  --purple1: rgb(220,138,221);
+  --purple2: rgb(192,97,203);
+  --purple3: rgb(145,65,172);
+  --purple4: rgb(129,61,156);
+  --purple5: rgb(97,53,131);
+  --brown1: rgb(205,171,143);
+  --brown2: rgb(181,131,90);
+  --brown3: rgb(152,106,68);
+  --brown4: rgb(134,94,60);
+  --brown5: rgb(99,69,44);
+  --light1: rgb(255,255,255);
+  --light2: rgb(246,245,244);
+  --light3: rgb(222,221,218);
+  --light4: rgb(192,191,188);
+  --light5: rgb(154,153,150);
+  --dark1: rgb(119,118,123);
+  --dark2: rgb(94,92,100);
+  --dark3: rgb(61,56,70);
+  --dark4: rgb(36,31,49);
+  --dark5: rgb(0,0,0);
+
+  --text1: rgba(255,255,255, 0.8);
+  --text2: rgba(255,255,255, 0.9);
+  --text3: rgb(85, 85, 85);
+  --text4: rgb(119, 119, 119);
+  --text5: rgb(170, 170, 170);
+  --border: rgba(120, 120, 120, 0.4);
+  --background-color: rgb(255,255,255);
+  --background-color-dark: rgb(36, 36, 36);
+
+  --card-size: 12em; /* Used to conveniently scale cards */
+}
+
+@font-face {
+  font-family: "Cantarell";
+  font-weight: 100 900;
+  font-display: swap;
+  font-style: normal;
+  font-named-instance: "Regular";
+  src: url("fonts/Cantarell-VF.woff2") format("woff2"),
+    url("fonts/Cantarell-VF.otf") format("opentype");
+}
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  font-family: "Cantarell";
+  font-weight: 400;
+  text-decoration: none;
+}
+
+body {
+  background-color: var(--dark5);
+  background-image: url(img/curtain3.png);
+  background-repeat: repeat-x;
+  background-attachment: fixed;
+}
+
+.curtain {
+  background-image: url(img/curtain2-r.png), url(img/curtain2-l.png);
+  background-size: auto 100%;
+  background-position: right top, left top;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+}
+
+@media screen and (max-width: 750px) {
+  .curtain {
+    background-image: none;
+  }
+}
+
+.container {
+  display: flex;
+  align-items: center;
+  align-content: center;
+  min-height: 100vh;
+}
+
+.main {
+  padding: 1.5em 1em;
+  width: clamp(350px, 100%, calc(var(--card-size) * 4));
+  margin: auto;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1.5em;
+}
+
+/* ## Global Card Styles */
+.card {
+  /* Edit the `--card-size` variable in the top of this document*/
+  height: calc(var(--card-size) - var(--card-size) / 10);
+  border-radius: 12px;
+  /* Used for layout debugging: */
+  /* border: 1px solid red; */
+}
+
+.card-square {
+  flex-basis: var(--card-size);
+  flex-grow: 1;
+}
+
+.card-wide {
+  flex-basis: calc(var(--card-size) * 2);
+  flex-grow: 2;
+}
+
+/* ## Project Cards */
+.card-project {
+  border: 1px solid var(--border);
+  background-color: none;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 0 2.5em;
+  gap: 2em;
+  backdrop-filter: blur(16px);
+}
+
+.project-image {
+  height: 35%;
+}
+
+.project-about {
+  display: flex;
+  flex-direction: column;
+  gap: 0.2rem;
+}
+
+.project-title {
+  font-size: 1.5rem;
+  font-weight: 900;
+  font-variation-settings: "wght" 900;
+  color: var(--text5);
+}
+
+.project-description {
+  font-size: 1rem;
+  color: var(--text4);
+}
+
+/* ## Blog Cards */
+.card-blog {
+  background: linear-gradient(125deg, var(--orange2) 0%, var(--purple2) 100%);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 0 2.5em;
+  gap: 2em;
+  transition: filter 200ms, transform 100ms;
+  filter: blur(6px);
+}
+
+.card-blog:hover {
+  filter: blur(0);
+}
+
+.card-blog:active {
+  transform: scale(0.95);
+}
+
+.blog-image {
+  height: 35%;
+  opacity: 0.8;
+}
+
+.blog-about {
+  display: flex;
+  flex-direction: column;
+  gap: 0.2rem;
+}
+
+.blog-title {
+  font-size: 1.5rem;
+  font-weight: 900;
+  font-variation-settings: "wght" 900;
+  color: var(--text1);
+}
+
+.blog-description {
+  font-size: 1rem;
+  color: var(--text2);
+}
