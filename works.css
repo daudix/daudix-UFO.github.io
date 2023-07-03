@@ -94,13 +94,13 @@ body {
 
   overflow: hidden;
 
-  animation-name: background-brightness;
+  animation-name: curtain-light;
   animation-duration: 2s;
 }
 
-@keyframes background-brightness {
+@keyframes curtain-light {
   0%   {backdrop-filter: brightness(0%);}
-  40% {backdrop-filter: brightness(20%);}
+  40%  {backdrop-filter: brightness(20%);}
   100% {backdrop-filter: brightness(100%);}
 }
 
@@ -111,11 +111,11 @@ body {
   background-repeat: no-repeat;
   background-attachment: fixed;
 
-  animation-name: curtain;
+  animation-name: curtain-reveal;
   animation-duration: 1s;
 }
 
-@keyframes curtain {
+@keyframes curtain-reveal {
   0%   {transform: scaleX(4);}
   100% {transform: scaleX(1);}
 }
