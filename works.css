@@ -56,6 +56,8 @@
   --background-color-dark: rgb(36, 36, 36);
 
   --card-size: 12em; /* Used to conveniently scale cards */
+
+  background-attachment: fixed;
 }
 
 @font-face {
@@ -79,17 +81,39 @@
 
 body {
   background-color: var(--dark5);
-  background-image: url(img/curtain3.png);
+  background-image: url(img/curtain.png);
+  background-size: auto 100vh;
   background-repeat: repeat-x;
+  background-position: center;
   background-attachment: fixed;
+
+  overflow-x: hidden;
+
+  animation-name: background-brightness;
+  animation-duration: 2s;
+}
+
+@keyframes background-brightness {
+  0%   {backdrop-filter: brightness(0%);}
+  40% {backdrop-filter: brightness(20%);}
+  100% {backdrop-filter: brightness(100%);}
 }
 
 .curtain {
-  background-image: url(img/curtain2-r.png), url(img/curtain2-l.png);
-  background-size: auto 100%;
+  background-image: url(img/curtain-r.png), url(img/curtain-l.png);
+  background-size: auto 100vh;
   background-position: right top, left top;
   background-repeat: no-repeat;
+
   background-attachment: fixed;
+
+  animation-name: curtain;
+  animation-duration: 1s;
+}
+
+@keyframes curtain {
+  0%   {transform: scaleX(4);}
+  100% {transform: scaleX(1);}
 }
 
 @media screen and (max-width: 750px) {
@@ -112,6 +136,15 @@ body {
   display: flex;
   flex-wrap: wrap;
   gap: 1.5em;
+
+  animation-name: fade;
+  animation-duration: 2s;
+}
+
+@keyframes fade {
+  0%   {opacity: 0;}
+  50%  {opacity: 0;}
+  100% {opacity: 1;}
 }
 
 /* ## Global Card Styles */
@@ -142,11 +175,16 @@ body {
   align-items: center;
   padding: 0 2.5em;
   gap: 2em;
-  backdrop-filter: blur(16px);
+  backdrop-filter: blur(12px);
 }
 
 .project-image {
-  height: 35%;
+  height: 64px;
+  transition: transform 200ms;
+}
+
+.project-image:hover {
+  transform: scale(2);
 }
 
 .project-about {
@@ -165,47 +203,4 @@ body {
 .project-description {
   font-size: 1rem;
   color: var(--text4);
-}
-
-/* ## Blog Cards */
-.card-blog {
-  background: linear-gradient(125deg, var(--orange2) 0%, var(--purple2) 100%);
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  padding: 0 2.5em;
-  gap: 2em;
-  transition: filter 200ms, transform 100ms;
-  filter: blur(6px);
-}
-
-.card-blog:hover {
-  filter: blur(0);
-}
-
-.card-blog:active {
-  transform: scale(0.95);
-}
-
-.blog-image {
-  height: 35%;
-  opacity: 0.8;
-}
-
-.blog-about {
-  display: flex;
-  flex-direction: column;
-  gap: 0.2rem;
-}
-
-.blog-title {
-  font-size: 1.5rem;
-  font-weight: 900;
-  font-variation-settings: "wght" 900;
-  color: var(--text1);
-}
-
-.blog-description {
-  font-size: 1rem;
-  color: var(--text2);
 }
