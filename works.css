@@ -55,7 +55,7 @@
   --popup: rgba(120,120,120,0.8);
   --background-color: rgb(255,255,255);
   --background-color-dark: rgb(36,36,36);
-  --background-overlay: rgba(0,0,0,0.4);
+  --background-overlay: rgba(0,0,0,0.6);
 
   --card-size: 12em; /* Used to conveniently scale cards */
 
@@ -110,6 +110,7 @@ body {
   }
 }
 
+/* ## Curtains */
 .curtain {
   background-image: url(img/curtain-r.png), url(img/curtain-l.png);
   background-size: auto 100vh;
@@ -123,8 +124,8 @@ body {
 }
 
 @keyframes curtain-reveal {
-  0%   {transform: scaleX(4);}
-  100% {transform: scaleX(1);}
+  0%   { transform: scaleX(4); }
+  100% { transform: scaleX(1); }
 }
 
 @media screen and (max-width: 750px) {
@@ -168,10 +169,14 @@ body {
   flex-grow: 2;
 }
 
+.card-header {
+  flex-basis: calc(var(--card-size) * 4);
+  flex-grow: 2;
+}
+
 /* ## Project Cards */
 .card-project {
   border: 1px solid var(--border);
-  background-color: none;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -184,27 +189,14 @@ body {
   animation: fade-in 4s forwards;
 }
 
-/* Let's define an animation: */
 @keyframes fade-in {
-  0% {
-    opacity: 0;
-  }
-  50% {
-    opacity: 0;
-  }
-  100% {
-    opacity: 1;
-  }
+  0%   { opacity: 0; }
+  50%  { opacity: 0; }
+  100% { opacity: 1; }
 }
-
 
 .project-image {
-  height: 64px;
-  transition: transform 200ms;
-}
-
-.project-image:hover {
-  transform: scale(2);
+  height: 35%;
 }
 
 .project-about {
@@ -225,6 +217,62 @@ body {
   color: var(--text4);
 }
 
+/* ## Header Cards */
+.card-header {
+  border: none;
+  background-color: none;
+
+  backdrop-filter: blur(0px);
+  -webkit-backdrop-filter: blur(0px);
+}
+
+/* ## Popup Cards */
+.card-popup {
+  border: none;
+  background-color: none;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 0 2.5em;
+  gap: 2em;
+  border-radius: 0;
+  /* Used for layout debugging: */
+  /* border: 1px solid red; */
+}
+
+.popup-image {
+  height: 64px;
+}
+
+.popup-about {
+  display: flex;
+  flex-direction: column;
+  gap: 0.2rem;
+}
+
+.popup-title {
+  font-size: 1.5rem;
+  font-weight: 900;
+  font-variation-settings: "wght" 900;
+  color: var(--text5);
+}
+
+.popup-description {
+  font-size: 1rem;
+  color: var(--text4);
+}
+
+/* ## Icons */
+.icon {
+  height: 64px;
+  transition: transform 200ms;
+}
+
+.icon:hover {
+  transform: scale(2);
+}
+
+/* ## Buttons */
 .button {
   display:block;
   height: 1rem;
@@ -260,10 +308,13 @@ body {
   top: 0.6rem;
 }
 
-.info-text {
-  font-size: 1rem;
-  color: var(--text4);
+.button-close {
+  background-image: url(img/close-symbolic.svg);
+  right: 0.6rem;
+  top: 0.6rem;
 }
+
+/* ## Overlays */
 
 .overlay {
   position: fixed;
@@ -284,72 +335,11 @@ body {
   opacity: 1;
 }
 
-.popup {
-  border: 1px solid var(--border);
-  background-color: var(--popup);
-  display: block;
-  justify-content: center;
-  align-items: center;
-  padding: 0 2.5em;
-  gap: 2em;
-  backdrop-filter: blur(12px);
-  -webkit-backdrop-filter: blur(12px);
-  transition: all 400ms ease-in-out;
+/* ## Popups */
 
+/* .popup {
   position: fixed;
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
-}
-
-.popup-title {
-  font-size: 1.5rem;
-  font-weight: 900;
-  font-variation-settings: "wght" 900;
-  color: var(--dark5);
-  padding: 1em;
-
-  display: flex;
-  justify-content: center;
-  align-items: center;
-}
-
-.popup-description {
-  font-size: 1rem;
-  color: var(--dark5);
-}
-
-.popup .close {
-  position: absolute;
-  top: 0.2em;
-  right: 0.6em;
-  transition: all 200ms;
-  font-size: 1.5em;
-  font-weight: bold;
-  text-decoration: none;
-  color: var(--dark5);
-}
-
-.popup .close:hover {
-  color: var(--dark3);
-}
-.popup .content {
-  max-height: 80%;
-  overflow: auto;
-  position: relative;
-}
-
-@media screen and (max-width: 650px){
-  .box{
-    width: 80%;
-  }
-  .popup{
-    width: 80%;
-  }
-}
-
-@media screen and (max-width: 350px){
-  .popup{
-    height: 80vh;
-  }
-}
+} */

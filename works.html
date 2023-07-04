@@ -21,39 +21,32 @@
       property="og:description"
       content= "Passionate designer, translator, and FOSS contributor." />
     <meta property="og:image" content="https://daudix-ufo.github.io/img/og-image.png" />
-    <meta property="og:image:width" content="500" />
-    <meta property="og:image:height" content="500" />
+    <meta property="og:image:width" content="512" />
+    <meta property="og:image:height" content="512" />
     <meta property="og:image:alt" content="A simple representation of metaballs" />
-
-    <!-- <script>
-      function toggleInfo() {
-        var x = document.getElementById("info-text");
-        if (x.style.display === "none") {
-          x.style.display = "block";
-        } else {
-          x.style.display = "none";
-        }
-      } 
-    </script> -->
 
 
   </head>
   <body>
 
+
     <div class="curtain">
       <div class="container">
         <div class="main">
 
-          <div class="card card-square card-project">
-            <img class="project-image icon" src="img/icons/codes.loers.Punchclock.svg" alt="Hammer symbolic" />
+          <div class="card card-wide card-project card-header">
+            <img class="project-image" src="img/app-icon-design-symbolic.svg" alt="Icon symbolic" />
             <div class="project-about">
-              <h2 class="project-title">Punchclock</h2>
+              <h2 class="project-title">Design Showroom</h2>
+              <p class="project-description">A Sneak Peek into My Designs</p>
             </div>
+          </div>
 
-            <p id="info-text" class="info-text">Placeholder for something interesting</p>
-
-            <a href="https://gitlab.com/floers/punchclock" title="Visit Project" class="button button-link"></a>
-            <a onclick="toggleInfo()" title="About Icon" class="button button-info"></a>
+          <div class="card card-wide card-project card-header">
+            <div class="project-about">
+              <h2 class="project-title">Original Icons</h2>
+              <p class="project-description">Custom icons made for projects without prior ones</p>
+            </div>
           </div>
 
           <div class="card card-square card-project">
@@ -118,6 +111,38 @@
               <h2 class="project-title">Imaginer</h2>
             </div>
           </div>
+
+          <div class="card card-wide card-project card-header">
+            <div class="project-about">
+              <h2 class="project-title">Redrawn Icons</h2>
+              <p class="project-description">Tweaked icons made for projects with icon already present</p>
+            </div>
+          </div>
+
+          <div class="card card-square card-project">
+            <img class="project-image icon" src="img/icons/codes.loers.Punchclock.svg" alt="Hammer symbolic" />
+            <div class="project-about">
+              <h2 class="project-title">Punchclock</h2>
+            </div>
+
+            <a href="https://gitlab.com/floers/punchclock" title="Visit Project" class="button button-link"></a>
+            <a href="#punchclock" title="About Icon" class="button button-info"></a>
+          </div>
+
+        <!-- Popups -->
+
+        <div id="punchclock" class="overlay">
+          <div class="card card-popup popup">
+            <a href="#" title="Close" class="button button-close"></a>
+            <h2 class="popup-title">Punchclock</h2>
+            <p class="popup-description">There were icon already but it needed some tweaking, so I did it</p>
+          </div>
+          <div class="card card-popup popup">
+            <h2 class="popup-title">Before/After</h2>
+            <img class="popup-image icon" src="img/icons/codes.loers.Punchclock.Old.svg" alt="Punchclock icon" />
+            <img class="popup-image icon" src="img/icons/codes.loers.Punchclock.svg" alt="Punchclock icon" />
+          </div>
+        </div>
 
         </div>
       </div>
