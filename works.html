@@ -2,7 +2,7 @@
 <html lang="en-US">
 
 <head>
-  <link rel="stylesheet" href="works.css" />
+  <link rel="stylesheet" href="styles.css" />
   <link rel="icon" href="favicon.gif" />
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
@@ -24,15 +24,40 @@
 </head>
 
 <body>
+
+
   <script>
     window.onkeydown = function (event) {
       if (event.key == "Escape")
         window.location.replace('#');
+      pageScrollOn();
+    };
+    function pageScrollOff() {
+      document.body.classList.add("noscroll");
+    };
+    function pageScrollOn() {
+      document.body.classList.remove("noscroll");
+    };
+    window.onhashchange = function () {
+      var hash = window.location.hash; // Get the current fragment identifier
+
+      // Remove the '#' symbol from the hash string
+      var hashText = hash.slice(1);
+
+      if (hashText.length > 0) {
+        // Text exists after the hash symbol
+        // console.log('Text after the hash: ' + hashText); // Debug
+        pageScrollOff()
+      } else {
+        // No text after the hash symbol
+        // console.log('No text after the hash.'); // Debug
+        pageScrollOn()
+      }
     };
   </script>
 
 
-  <div class="curtain">
+  <div id="popupScrollTarget" class="curtain">
     <div class="container">
       <div class="main">
 
@@ -52,6 +77,9 @@
           </div>
         </div>
 
+        <!-- Cards -->
+
+        <!-- Original -->
 
         <div class="card card-square card-project">
           <img class="project-image icon" src="img/icons/org.nickvision.babylon.svg" alt="Hammer symbolic" />
@@ -124,6 +152,7 @@
           </div>
         </div>
 
+        <!-- Redrawn -->
 
         <div class="card card-square card-project">
           <img class="project-image icon" src="img/icons/com.github.neithern.g4music.svg" alt="Hammer symbolic" />
