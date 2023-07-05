@@ -57,7 +57,7 @@
   --background-color-dark: rgb(36,36,36);
   --background-overlay: rgba(0,0,0,0.6);
 
-  --card-size: 10em; /* Used to conveniently scale cards */
+  --card-size: 12em; /* Used to conveniently scale cards */
 
   background-attachment: fixed;
 }
