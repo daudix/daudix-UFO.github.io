@@ -196,6 +196,14 @@ body {
   background: linear-gradient(125deg, var(--red1) 0%, var(--purple3) 100%);
 }
 
+.card-info-orange {
+  background: linear-gradient(125deg, var(--orange2) 0%, var(--purple2) 100%);
+}
+
+.card-info-red {
+  background: linear-gradient(125deg, var(--dark2) 0%, var(--dark4) 100%);
+}
+
 /* ## Project Cards */
 .card-project {
   border: 1px solid var(--border);
@@ -228,45 +236,35 @@ body {
   color: var(--text4);
 }
 
-/* ## Blog Cards */
-.card-blog {
-  background: linear-gradient(125deg, var(--orange2) 0%, var(--purple2) 100%);
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  padding: 0 2.5em;
-  gap: 2em;
-  transition: filter 200ms, transform 100ms;
-  filter: blur(6px);
+/* ## Link Cards */
+.card-link {
+  border: none;
+  transition: transform 100ms;
 }
 
-.card-blog:hover {
-  filter: blur(0);
-}
-
-.card-blog:active {
+.card-link:active {
   transform: scale(0.95);
 }
 
-.blog-image {
+.link-image {
   height: 35%;
   opacity: 0.8;
 }
 
-.blog-about {
+.link-about {
   display: flex;
   flex-direction: column;
   gap: 0.2rem;
 }
 
-.blog-title {
+.link-title {
   font-size: 1.5rem;
   font-weight: 900;
   font-variation-settings: "wght" 900;
   color: var(--text1);
 }
 
-.blog-description {
+.link-description {
   font-size: 1rem;
   color: var(--text2);
 }
