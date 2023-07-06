@@ -162,6 +162,12 @@ body {
   overflow-y: hidden;
 }
 
+a {
+  text-decoration: underline dotted;
+  color: var(--text4);
+  font-weight: bold;
+}
+
 /* ## Global Card Styles */
 .card {
   /* Edit the `--card-size` variable in the top of this document*/
