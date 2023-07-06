@@ -261,8 +261,8 @@ a {
   display: flex;
   justify-content: center;
   align-items: center;
-  margin-top: 2.5em;
-  margin-bottom: 2.5em;
+  /* margin-top: 2.5em;
+  margin-bottom: 2.5em; */
   padding: 0 2.5em;
   gap: 2em;
   border-radius: 0;
@@ -374,6 +374,19 @@ a {
 /* ## Overlays */
 
 .overlay {
+  display: flex;
+  align-items: center;
+  align-content: center;
+  min-height: 100vh;
+  flex-direction: column;
+
+  overflow-x: hidden;
+  overflow-y: auto;
+
+  padding: 1.5em 1em;
+  margin: auto;
+  gap: 1.5em;
+
   position: fixed;
   top: 0;
   bottom: 0;
