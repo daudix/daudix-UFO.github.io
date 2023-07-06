@@ -300,6 +300,7 @@ a {
 
 .icon:hover {
   transform: scale(2);
+  z-index: 1;
 }
 
 /* ## Wallpapers */
@@ -321,6 +322,7 @@ a {
 
 .wallpaper-big:hover {
   transform: scale(1.1);
+  z-index: 1;
 }
 
 /* ## Buttons */
