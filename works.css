@@ -299,8 +299,8 @@ body {
 /* ## Buttons */
 .button {
   display: block;
-  height: 1rem;
-  width: 1rem;
+  height: 1em;
+  width: 1em;
   border-radius: 50%;
 
   background-color: var(--border);
@@ -311,7 +311,7 @@ body {
 
   border: none;
   color: var(--light1);
-  padding: 1rem 1rem;
+  padding: 1em 1em;
   font-size: 1rem;
   cursor: pointer;
 }

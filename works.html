@@ -29,46 +29,46 @@
   <script>
     // Close modal when esc key is pressed
     window.onkeydown = function (event) {
-        if (event.key == "Escape")
-            window.location.replace('#');
+      if (event.key == "Escape")
+        window.location.replace('#');
     };
 
     // Check if the modal is open and disable scroll, otherwise enable it
     function checkModalState() {
-        var hash = window.location.hash;
-        var hashText = hash.slice(1);
+      var hash = window.location.hash;
+      var hashText = hash.slice(1);
 
-        if (hashText.length > 0) {
-            // Text exists after the hash symbol
-            // console.log('Text after the hash: ' + hashText); // Debug
-            pageScrollOff();
-        } else {
-            // No text after the hash symbol
-            // console.log('No text after the hash.'); // Debug
-            pageScrollOn();
-        }
+      if (hashText.length > 0) {
+        // Text exists after the hash symbol
+        // console.log('Text after the hash: ' + hashText); // Debug
+        pageScrollOff();
+      } else {
+        // No text after the hash symbol
+        // console.log('No text after the hash.'); // Debug
+        pageScrollOn();
+      }
     };
 
     // Check if the modal is open on page load
     window.onload = function () {
-        checkModalState();
+      checkModalState();
     };
 
     // Check if the modal is open and disable scroll, otherwise enable it
     window.onhashchange = function () {
-        checkModalState();
+      checkModalState();
     };
 
     // Function to disable page scrolling
     function pageScrollOff() {
-        document.body.style.overflow = 'hidden';
-        document.documentElement.style.overflow = 'hidden';
+      document.body.style.overflow = 'hidden';
+      document.documentElement.style.overflow = 'hidden';
     };
 
     // Function to enable page scrolling
     function pageScrollOn() {
-        document.body.style.overflowY = '';
-        document.documentElement.style.overflowY = '';
+      document.body.style.overflowY = '';
+      document.documentElement.style.overflowY = '';
     };
   </script>
 
@@ -78,7 +78,7 @@
       <div class="main">
 
         <div class="card card-wide card-project card-header">
-          <img class="project-image" src="img/app-icon-design-symbolic.svg" alt="Icon symbolic" />
+          <img class="project-image" src="img/app-icon-design-symbolic.svg" alt="Design symbolic" />
           <div class="project-about">
             <h2 class="project-title">Design Showroom</h2>
             <p class="project-description">A sneak peek into my designs</p>
@@ -98,7 +98,7 @@
         <!-- Original -->
 
         <div class="card card-square card-project">
-          <img class="project-image icon" src="img/icons/org.nickvision.babylon.svg" alt="Hammer symbolic" />
+          <img class="project-image icon" src="img/icons/org.nickvision.babylon.svg" alt="Babylon icon" />
           <div class="project-about">
             <h2 class="project-title">Babylon</h2>
           </div>
@@ -107,7 +107,7 @@
         </div>
 
         <div class="card card-square card-project">
-          <img class="project-image icon" src="img/icons/com.github.Bavarder.Bavarder.svg" alt="Hammer symbolic" />
+          <img class="project-image icon" src="img/icons/com.github.Bavarder.Bavarder.svg" alt="Bavarder icon" />
           <div class="project-about">
             <h2 class="project-title">Bavarder</h2>
           </div>
@@ -116,7 +116,7 @@
         </div>
 
         <div class="card card-square card-project">
-          <img class="project-image icon" src="img/icons/org.nickvision.cavalier.svg" alt="Hammer symbolic" />
+          <img class="project-image icon" src="img/icons/org.nickvision.cavalier.svg" alt="Cavalier icon" />
           <div class="project-about">
             <h2 class="project-title">Cavalier</h2>
           </div>
@@ -125,7 +125,7 @@
         </div>
 
         <div class="card card-square card-project">
-          <img class="project-image icon" src="img/icons/de.schmidhuberj.Flare.svg" alt="Hammer symbolic" />
+          <img class="project-image icon" src="img/icons/de.schmidhuberj.Flare.svg" alt="Flare icon" />
           <div class="project-about">
             <h2 class="project-title">Flare</h2>
           </div>
@@ -134,7 +134,7 @@
         </div>
 
         <div class="card card-square card-project">
-          <img class="project-image icon" src="img/icons/io.github.tfuxu.Halftone.svg" alt="Hammer symbolic" />
+          <img class="project-image icon" src="img/icons/io.github.tfuxu.Halftone.svg" alt="Halftone icon" />
           <div class="project-about">
             <h2 class="project-title">Halftone</h2>
           </div>
@@ -143,7 +143,7 @@
         </div>
 
         <div class="card card-square card-project">
-          <img class="project-image icon" src="img/icons/page.codeberg.Imaginer.Imaginer.svg" alt="Hammer symbolic" />
+          <img class="project-image icon" src="img/icons/page.codeberg.Imaginer.Imaginer.svg" alt="Imaginer icon" />
           <div class="project-about">
             <h2 class="project-title">Imaginer</h2>
           </div>
@@ -152,7 +152,7 @@
         </div>
 
         <div class="card card-square card-project">
-          <img class="project-image icon" src="img/icons/org.nickvision.tagger.svg" alt="Hammer symbolic" />
+          <img class="project-image icon" src="img/icons/org.nickvision.tagger.svg" alt="Tagger icon" />
           <div class="project-about">
             <h2 class="project-title">Tagger</h2>
           </div>
@@ -171,7 +171,7 @@
         <!-- Redrawn -->
 
         <div class="card card-square card-project">
-          <img class="project-image icon" src="img/icons/com.github.neithern.g4music.svg" alt="Hammer symbolic" />
+          <img class="project-image icon" src="img/icons/com.github.neithern.g4music.svg" alt="G4Music icon" />
           <div class="project-about">
             <h2 class="project-title">G4Music</h2>
           </div>
@@ -180,7 +180,7 @@
         </div>
 
         <div class="card card-square card-project">
-          <img class="project-image icon" src="img/icons/codes.loers.Punchclock.svg" alt="Hammer symbolic" />
+          <img class="project-image icon" src="img/icons/codes.loers.Punchclock.svg" alt="Punchclock icon" />
           <div class="project-about">
             <h2 class="project-title">Punchclock</h2>
           </div>
@@ -189,7 +189,7 @@
         </div>
 
         <div class="card card-square card-project">
-          <img class="project-image icon" src="img/icons/com.vixalien.sticky.svg" alt="Hammer symbolic" />
+          <img class="project-image icon" src="img/icons/com.vixalien.sticky.svg" alt="Sticky Notes icon" />
           <div class="project-about">
             <h2 class="project-title">Sticky Notes</h2>
           </div>
