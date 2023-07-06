@@ -1,6 +1,7 @@
 ![Screenshot](screenshot.png)
+![Screenshot 2](screenshot-2.png)
 
-# daudix.undo.it
+# daudix-ufo.github.io
 
 _Based on [bragefuglseth.dev](https://github.com/bragefuglseth/bragefuglseth.github.io)_
 
