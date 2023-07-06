@@ -190,6 +190,7 @@ body {
 .card-project {
   border: 1px solid var(--border);
   display: flex;
+  position: relative;
   justify-content: center;
   align-items: center;
   padding: 0 2.5em;
