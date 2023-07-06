@@ -302,6 +302,27 @@ a {
   transform: scale(2);
 }
 
+/* ## Wallpapers */
+.wallpaper {
+  object-fit: cover;
+  width: 128px;
+  height: 128px;
+  border-radius: 12px;
+}
+
+.wallpaper-big {
+  display: block;
+  height: auto;
+  width: 40vw;
+  border-radius: 12px;
+  filter: saturate(1);
+  transition: transform 200ms;
+}
+
+.wallpaper-big:hover {
+  transform: scale(1.1);
+}
+
 /* ## Buttons */
 .button {
   display: block;
@@ -332,15 +353,21 @@ a {
   top: 0.6rem;
 }
 
-.button-info {
-  background-image: url(img/info-symbolic.svg);
-  left: 0.6rem;
+.button-download {
+  background-image: url(img/download-symbolic.svg);
+  right: 0.6rem;
   top: 0.6rem;
 }
 
 .button-close {
   background-image: url(img/close-symbolic.svg);
   right: 0.6rem;
+  top: 0.6rem;
+}
+
+.button-info {
+  background-image: url(img/info-symbolic.svg);
+  left: 0.6rem;
   top: 0.6rem;
 }
 

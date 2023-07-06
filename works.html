@@ -30,7 +30,7 @@
     // Close modal when esc key is pressed
     window.onkeydown = function (event) {
       if (event.key == "Escape")
-        window.location.replace('#');
+        window.history.go(-1);
     };
 
     // Check if the modal is open and disable scroll, otherwise enable it
@@ -95,7 +95,7 @@
 
         <!-- Cards -->
 
-        <!-- Original -->
+        <!-- Original icons -->
 
         <div class="card card-square card-project">
           <img class="project-image icon" src="img/icons/org.nickvision.babylon.svg" alt="Babylon icon" />
@@ -168,7 +168,7 @@
           </div>
         </div>
 
-        <!-- Redrawn -->
+        <!-- Redrawn icons -->
 
         <div class="card card-square card-project">
           <img class="project-image icon" src="img/icons/com.github.neithern.g4music.svg" alt="G4Music icon" />
@@ -197,13 +197,63 @@
           <a href="#sticky" title="About Icon" class="button button-info"></a>
         </div>
 
+
+        <div class="card card-wide card-project card-header">
+          <div class="project-about">
+            <h2 class="project-title">Wallpapers</h2>
+            <p class="project-description">Wallpapers that I have made for myself, that you can use too</p>
+          </div>
+        </div>
+
+        <!-- Wallpapers -->
+
+        <div class="card card-square card-project">
+          <img class="project-image wallpaper" src="img/wallpapers/crash.png" alt="Waves wallpaper" />
+          <div class="project-about">
+            <h2 class="project-title">Crash</h2>
+          </div>
+          <a href="https://github.com/daudix-UFO/Drawer/tree/main/Wallpapers/Crash" title="Download Wallpaper"
+            class="button button-download"></a>
+          <a href="#crash" title="About Wallpaper" class="button button-info"></a>
+        </div>
+
+        <div class="card card-square card-project">
+          <img class="project-image wallpaper" src="img/wallpapers/finder.png" alt="Finder wallpaper" />
+          <div class="project-about">
+            <h2 class="project-title">Finder</h2>
+          </div>
+          <a href="https://github.com/daudix-UFO/Drawer/tree/main/Wallpapers/Finder" title="Download Wallpaper"
+            class="button button-download"></a>
+          <a href="#finder" title="About Wallpaper" class="button button-info"></a>
+        </div>
+
+        <div class="card card-square card-project">
+          <img class="project-image wallpaper" src="img/wallpapers/lava.webp" alt="Lava wallpaper" />
+          <div class="project-about">
+            <h2 class="project-title">Lava</h2>
+          </div>
+          <a href="https://github.com/daudix-UFO/Drawer/tree/main/Wallpapers/Mesh/Lava" title="Download Wallpaper"
+            class="button button-download"></a>
+          <a href="#lava" title="About Wallpaper" class="button button-info"></a>
+        </div>
+
+        <div class="card card-square card-project">
+          <img class="project-image wallpaper" src="img/wallpapers/waves.webp" alt="Waves wallpaper" />
+          <div class="project-about">
+            <h2 class="project-title">Waves</h2>
+          </div>
+          <a href="https://github.com/daudix-UFO/Drawer/tree/main/Wallpapers/Mesh/Waves" title="Download Wallpaper"
+            class="button button-download"></a>
+          <a href="#waves" title="About Wallpaper" class="button button-info"></a>
+        </div>
+
         <!-- Popups -->
 
-        <!-- Original -->
+        <!-- Original icons -->
 
         <div id="babylon" class="overlay">
-          <div class="card card-popup popup">
-            <a href="#" title="Close" class="button button-close"></a>
+          <div class="card card-wide card-popup popup">
+            <a onclick="window.history.go(-1)" title="Close" class="button button-close"></a>
             <h2 class="popup-title">Babylon</h2>
             <p class="popup-description">
               A manuscript with green cover and "Ѣ" (Yat) character on the sheet.
@@ -212,8 +262,8 @@
         </div>
 
         <div id="bavarder" class="overlay">
-          <div class="card card-popup popup">
-            <a href="#" title="Close" class="button button-close"></a>
+          <div class="card card-wide card-popup popup">
+            <a onclick="window.history.go(-1)" title="Close" class="button button-close"></a>
             <h2 class="popup-title">Bavarder</h2>
             <p class="popup-description">
               The bubble with cute robot face and orange bubble with three question marks symbolises conversation with
@@ -223,8 +273,8 @@
         </div>
 
         <div id="cavalier" class="overlay">
-          <div class="card card-popup popup">
-            <a href="#" title="Close" class="button button-close"></a>
+          <div class="card card-wide card-popup popup">
+            <a onclick="window.history.go(-1)" title="Close" class="button button-close"></a>
             <h2 class="popup-title">Cavalier</h2>
             <p class="popup-description">
               A orange weird-looking device with audio visualizer, two knobs and three levers.
@@ -235,8 +285,8 @@
         </div>
 
         <div id="flare" class="overlay">
-          <div class="card card-popup popup">
-            <a href="#" title="Close" class="button button-close"></a>
+          <div class="card card-wide card-popup popup">
+            <a onclick="window.history.go(-1)" title="Close" class="button button-close"></a>
             <h2 class="popup-title">Flare</h2>
             <p class="popup-description">
               A blue message bubble with fire'ish star in center of it.
@@ -246,7 +296,7 @@
               because it's a gun after all. xD
             </p>
           </div>
-          <div class="card card-popup popup">
+          <div class="card card-wide card-popup popup">
             <img class="popup-image icon" src="img/icons/de.schmidhuberj.Flare.1.svg" alt="Flare icon" />
             <img class="popup-image icon" src="img/icons/de.schmidhuberj.Flare.2.svg" alt="Flare icon" />
             <img class="popup-image icon" src="img/icons/de.schmidhuberj.Flare.3.svg" alt="Flare icon" />
@@ -254,8 +304,8 @@
         </div>
 
         <div id="halftone" class="overlay">
-          <div class="card card-popup popup">
-            <a href="#" title="Close" class="button button-close"></a>
+          <div class="card card-wide card-popup popup">
+            <a onclick="window.history.go(-1)" title="Close" class="button button-close"></a>
             <h2 class="popup-title">Halftone</h2>
             <p class="popup-description">
               A stack of pictures with yellow/orange halftone pattern on it.
@@ -267,7 +317,7 @@
               and that version made its way to the app.
             </p>
           </div>
-          <div class="card card-popup popup">
+          <div class="card card-wide card-popup popup">
             <img class="popup-image icon" src="img/icons/io.github.tfuxu.Halftone.1.svg" alt="Halftone icon" />
             <img class="popup-image icon" src="img/icons/io.github.tfuxu.Halftone.2.svg" alt="Halftone icon" />
             <img class="popup-image icon" src="img/icons/io.github.tfuxu.Halftone.svg" alt="Halftone icon" />
@@ -275,8 +325,8 @@
         </div>
 
         <div id="imaginer" class="overlay">
-          <div class="card card-popup popup">
-            <a href="#" title="Close" class="button button-close"></a>
+          <div class="card card-wide card-popup popup">
+            <a onclick="window.history.go(-1)" title="Close" class="button button-close"></a>
             <h2 class="popup-title">Imaginer</h2>
             <p class="popup-description">
               A stack of pictures with colorful triangular pattern on it.
@@ -285,8 +335,8 @@
         </div>
 
         <div id="tagger" class="overlay">
-          <div class="card card-popup popup">
-            <a href="#" title="Close" class="button button-close"></a>
+          <div class="card card-wide card-popup popup">
+            <a onclick="window.history.go(-1)" title="Close" class="button button-close"></a>
             <h2 class="popup-title">Tagger</h2>
             <p class="popup-description">
               A stack of sheets with orange music note in front of them.
@@ -296,20 +346,20 @@
           </div>
         </div>
 
-        <!-- Redrawn -->
+        <!-- Redrawn icons-->
 
         <div id="g4music" class="overlay">
-          <div class="card card-popup popup">
-            <a href="#" title="Close" class="button button-close"></a>
+          <div class="card card-wide card-popup popup">
+            <a onclick="window.history.go(-1)" title="Close" class="button button-close"></a>
             <h2 class="popup-title">G4Music</h2>
             <p class="popup-description">
               Vinyl record with player head made in G4Music's vibrant green tones.
             </p>
           </div>
-          <div class="card card-popup popup">
+          <div class="card card-wide card-popup popup">
             <h2 class="popup-description">Original/Redrawn/Reborn</h2>
           </div>
-          <div class="card card-popup popup">
+          <div class="card card-wide card-popup popup">
             <img class="popup-image icon" src="img/icons/com.github.neithern.g4music.1.svg" alt="G4Music icon" />
             <img class="popup-image icon" src="img/icons/com.github.neithern.g4music.2.svg" alt="G4Music icon" />
             <img class="popup-image icon" src="img/icons/com.github.neithern.g4music.svg" alt="G4Music icon" />
@@ -317,8 +367,8 @@
         </div>
 
         <div id="punchclock" class="overlay">
-          <div class="card card-popup popup">
-            <a href="#" title="Close" class="button button-close"></a>
+          <div class="card card-wide card-popup popup">
+            <a onclick="window.history.go(-1)" title="Close" class="button button-close"></a>
             <h2 class="popup-title">Punchclock</h2>
             <p class="popup-description">
               The original icon were alright but there were room for improvement,
@@ -326,18 +376,18 @@
               and so the new icon was born, with a new look with bigger button, green LCD and flipped layout.
             </p>
           </div>
-          <div class="card card-popup popup">
+          <div class="card card-wide card-popup popup">
             <h2 class="popup-description">Original/Redrawn</h2>
           </div>
-          <div class="card card-popup popup">
+          <div class="card card-wide card-popup popup">
             <img class="popup-image icon" src="img/icons/codes.loers.Punchclock.Old.svg" alt="Punchclock icon" />
             <img class="popup-image icon" src="img/icons/codes.loers.Punchclock.svg" alt="Punchclock icon" />
           </div>
         </div>
 
         <div id="sticky" class="overlay">
-          <div class="card card-popup popup">
-            <a href="#" title="Close" class="button button-close"></a>
+          <div class="card card-wide card-popup popup">
+            <a onclick="window.history.go(-1)" title="Close" class="button button-close"></a>
             <h2 class="popup-title">Sticky Notes</h2>
             <p class="popup-description">
               A pair of sticky notes pinned with red pin, with schematic handwritten text on front note.
@@ -350,13 +400,72 @@
                 icon</a>.
             </p>
           </div>
-          <div class="card card-popup popup">
+          <div class="card card-wide card-popup popup">
             <h2 class="popup-description">Original/Redrawn/Tweaked</h2>
           </div>
-          <div class="card card-popup popup">
+          <div class="card card-wide card-popup popup">
             <img class="popup-image icon" src="img/icons/com.vixalien.sticky.1.svg" alt="Sticky Notes icon" />
             <img class="popup-image icon" src="img/icons/com.vixalien.sticky.2.svg" alt="Sticky Notes icon" />
             <img class="popup-image icon" src="img/icons/com.vixalien.sticky.svg" alt="Sticky Notes icon" />
+          </div>
+        </div>
+
+        <!-- Wallpapers -->
+
+        <div id="crash" class="overlay">
+          <div class="card card-wide card-popup popup">
+            <a onclick="window.history.go(-1)" title="Close" class="button button-close"></a>
+            <h2 class="popup-title">Crash</h2>
+            <p class="popup-description">
+              Wallpaper inspired by <a href="https://en.wikipedia.org/wiki/Macintosh_startup#Sad_Mac">Sad Mac</a>, made
+              with Adwaita icons and colors.
+            </p>
+          </div>
+          <div class="card card-wide card-popup popup">
+            <img class="popup-image wallpaper-big" src="img/wallpapers/crash.png" alt="Crash wallpaper" />
+            <img class="popup-image wallpaper-big" src="img/wallpapers/crash-dark.png" alt="Crash wallpaper" />
+          </div>
+        </div>
+
+        <div id="finder" class="overlay">
+          <div class="card card-wide card-popup popup">
+            <a onclick="window.history.go(-1)" title="Close" class="button button-close"></a>
+            <h2 class="popup-title">Finder</h2>
+            <p class="popup-description">
+              Classic <a href="https://en.wikipedia.org/wiki/Mac_OS_9">Mac OS 9</a> wallpaper, remade.
+            </p>
+          </div>
+          <div class="card card-wide card-popup popup">
+            <img class="popup-image wallpaper-big" src="img/wallpapers/finder.png" alt="Finder wallpaper" />
+            <img class="popup-image wallpaper-big" src="img/wallpapers/finder-dark.png" alt="Finder wallpaper" />
+          </div>
+        </div>
+
+        <div id="lava" class="overlay">
+          <div class="card card-wide card-popup popup">
+            <a onclick="window.history.go(-1)" title="Close" class="button button-close"></a>
+            <h2 class="popup-title">Lava</h2>
+            <p class="popup-description">
+              Abstract color waves in warm colors, made with mesh gradient tool in Inkscape.
+            </p>
+          </div>
+          <div class="card card-wide card-popup popup">
+            <img class="popup-image wallpaper-big" src="img/wallpapers/lava.webp" alt="Lava wallpaper" />
+            <img class="popup-image wallpaper-big" src="img/wallpapers/lava-dark.webp" alt="Lava wallpaper" />
+          </div>
+        </div>
+
+        <div id="waves" class="overlay">
+          <div class="card card-wide card-popup popup">
+            <a onclick="window.history.go(-1)" title="Close" class="button button-close"></a>
+            <h2 class="popup-title">Waves</h2>
+            <p class="popup-description">
+              Abstract color waves in cold colors, made with mesh gradient tool in Inkscape.
+            </p>
+          </div>
+          <div class="card card-wide card-popup popup">
+            <img class="popup-image wallpaper-big" src="img/wallpapers/waves.webp" alt="Waves wallpaper" />
+            <img class="popup-image wallpaper-big" src="img/wallpapers/waves-dark.webp" alt="Waves wallpaper" />
           </div>
         </div>
 
