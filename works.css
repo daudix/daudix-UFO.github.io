@@ -59,6 +59,8 @@
 
   --card-size: 12em;
   /* Used to conveniently scale cards */
+
+  background-attachment: fixed;
 }
 
 @font-face {
@@ -259,11 +261,13 @@ a {
   display: flex;
   justify-content: center;
   align-items: center;
-  /* padding: 0 2.5em; */
+  margin-top: 2.5em;
+  margin-bottom: 2.5em;
+  padding: 0 2.5em;
   gap: 2em;
   border-radius: 0;
   /* Used for layout debugging: */
-  border: 1px solid red;
+  /* border: 1px solid red; */
 }
 
 .popup-image {
@@ -369,32 +373,12 @@ a {
 
 /* ## Overlays */
 
-.container-overlay {
-  display: flex;
-  align-items: center;
-  align-content: center;
-  min-height: 100vh;
-}
-
-.main-overlay {
-  /* width: clamp(350px, 100%, calc(var(--card-size) * 4)); */
-  padding: 1.5em 1em;
-  margin: auto;
-  display: flex;
-  flex-wrap: wrap;
-  gap: 1.5em;
-
-  overflow-y: auto;
-  overflow-x: hidden;
-}
-
 .overlay {
   position: fixed;
   top: 0;
   bottom: 0;
   left: 0;
   right: 0;
-  border-radius: 12px;
   background: var(--background-overlay);
   backdrop-filter: blur(12px);
   -webkit-backdrop-filter: blur(12px);
