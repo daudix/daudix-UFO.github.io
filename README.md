@@ -1,5 +1,4 @@
 ![Screenshot](screenshot.png)
-![Screenshot 2](screenshot-2.png)
 
 # daudix-ufo.github.io
 
