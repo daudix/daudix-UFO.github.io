@@ -201,7 +201,7 @@ body {
   background: linear-gradient(125deg, var(--orange2) 0%, var(--purple2) 100%);
 }
 
-.card-info-red {
+.card-info-dark {
   background: linear-gradient(125deg, var(--dark2) 0%, var(--dark4) 100%);
 }
 
