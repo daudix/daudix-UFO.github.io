@@ -88,7 +88,7 @@
 body {
   background-color: var(--background-color);
   color: var(--text);
-  font-size: 1.4rem;
+  font-size: 14pt;
 }
 
 .container {
@@ -135,7 +135,7 @@ body {
 
 .header {
   width: 5em;
-  font-size: 2.5rem;
+  font-size: 24pt;
 }
 
 /* ## Project Cards */
@@ -153,18 +153,18 @@ body {
 }
 
 .about {
-  font-size: 1.6rem;
+  font-size: 18pt;
   display: flex;
   flex-direction: column;
   gap: 0.2rem;
 }
 
 .title {
-  font-size: 1.4rem;
+  font-size: 18pt;
 }
 
 .description {
-  font-size: 1.2rem;
+  font-size: 14pt;
 }
 
 .link-container {
@@ -178,18 +178,18 @@ body {
 }
 
 .link {
-  font-size: 1.2rem;
+  font-size: 14pt;
   color: var(--text);
   text-decoration: underline;
   transition: transform 200ms;
-  transform-origin: left;
+  transform-origin: bottom;
 
   display: inline-block;
   text-align: left;
 }
 
 .link:hover {
-  transform: skewX(-20deg) scaleX(1.1);
+  transform: skewX(-20deg);
 }
 
 @media (prefers-color-scheme: dark) {
