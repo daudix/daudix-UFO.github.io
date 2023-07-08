@@ -20,6 +20,54 @@
   <meta property="og:image:height" content="512" />
   <meta property="og:image:alt" content="A simple representation of metaballs" />
 
+  <script defer data-domain="daudix-ufo.github.io" src="https://analytics.projectsegfau.lt/js/script.js"></script>
+
+  <script>
+    // Close modal when esc key is pressed
+    window.onkeydown = function (event) {
+      if (event.key == "Escape")
+        window.history.go(-1);
+    };
+
+    // Check if the modal is open and disable scroll, otherwise enable it
+    function checkModalState() {
+      var hash = window.location.hash;
+      var hashText = hash.slice(1);
+
+      if (hashText.length > 0) {
+        // Text exists after the hash symbol
+        // console.log('Text after the hash: ' + hashText); // Debug
+        pageScrollOff();
+      } else {
+        // No text after the hash symbol
+        // console.log('No text after the hash.'); // Debug
+        pageScrollOn();
+      }
+    };
+
+    // Check if the modal is open on page load
+    window.onload = function () {
+      checkModalState();
+    };
+
+    // Check if the modal is open and disable scroll, otherwise enable it
+    window.onhashchange = function () {
+      checkModalState();
+    };
+
+    // Function to disable page scrolling
+    function pageScrollOff() {
+      document.body.style.overflow = 'hidden';
+      document.documentElement.style.overflow = 'hidden';
+    };
+
+    // Function to enable page scrolling
+    function pageScrollOn() {
+      document.body.style.overflowY = '';
+      document.documentElement.style.overflowY = '';
+    };
+  </script>
+
 
 </head>
 
@@ -480,52 +528,6 @@
       </div>
     </div>
   </div>
-
-  <script>
-    // Close modal when esc key is pressed
-    window.onkeydown = function (event) {
-      if (event.key == "Escape")
-        window.history.go(-1);
-    };
-
-    // Check if the modal is open and disable scroll, otherwise enable it
-    function checkModalState() {
-      var hash = window.location.hash;
-      var hashText = hash.slice(1);
-
-      if (hashText.length > 0) {
-        // Text exists after the hash symbol
-        // console.log('Text after the hash: ' + hashText); // Debug
-        pageScrollOff();
-      } else {
-        // No text after the hash symbol
-        // console.log('No text after the hash.'); // Debug
-        pageScrollOn();
-      }
-    };
-
-    // Check if the modal is open on page load
-    window.onload = function () {
-      checkModalState();
-    };
-
-    // Check if the modal is open and disable scroll, otherwise enable it
-    window.onhashchange = function () {
-      checkModalState();
-    };
-
-    // Function to disable page scrolling
-    function pageScrollOff() {
-      document.body.style.overflow = 'hidden';
-      document.documentElement.style.overflow = 'hidden';
-    };
-
-    // Function to enable page scrolling
-    function pageScrollOn() {
-      document.body.style.overflowY = '';
-      document.documentElement.style.overflowY = '';
-    };
-  </script>
 
 
 </body>
