@@ -26,53 +26,6 @@
 <body>
 
 
-  <script>
-    // Close modal when esc key is pressed
-    window.onkeydown = function (event) {
-      if (event.key == "Escape")
-        window.history.go(-1);
-    };
-
-    // Check if the modal is open and disable scroll, otherwise enable it
-    function checkModalState() {
-      var hash = window.location.hash;
-      var hashText = hash.slice(1);
-
-      if (hashText.length > 0) {
-        // Text exists after the hash symbol
-        // console.log('Text after the hash: ' + hashText); // Debug
-        pageScrollOff();
-      } else {
-        // No text after the hash symbol
-        // console.log('No text after the hash.'); // Debug
-        pageScrollOn();
-      }
-    };
-
-    // Check if the modal is open on page load
-    window.onload = function () {
-      checkModalState();
-    };
-
-    // Check if the modal is open and disable scroll, otherwise enable it
-    window.onhashchange = function () {
-      checkModalState();
-    };
-
-    // Function to disable page scrolling
-    function pageScrollOff() {
-      document.body.style.overflow = 'hidden';
-      document.documentElement.style.overflow = 'hidden';
-    };
-
-    // Function to enable page scrolling
-    function pageScrollOn() {
-      document.body.style.overflowY = '';
-      document.documentElement.style.overflowY = '';
-    };
-  </script>
-
-
   <div id="popupScrollTarget" class="curtain">
     <div class="container">
       <div class="main">
@@ -206,6 +159,16 @@
         </div>
 
         <!-- Wallpapers -->
+
+        <div class="card card-square card-project">
+          <img class="project-image wallpaper" src="img/wallpapers/amber.webp" alt="Amber wallpaper" />
+          <div class="project-about">
+            <h2 class="project-title">Amber</h2>
+          </div>
+          <a href="https://github.com/daudix-UFO/Drawer/tree/main/Wallpapers/Mesh/Amber" title="Download Wallpaper"
+            class="button button-download"></a>
+          <a href="#amber" title="About Wallpaper" class="button button-info"></a>
+        </div>
 
         <div class="card card-square card-project">
           <img class="project-image wallpaper" src="img/wallpapers/crash.png" alt="Waves wallpaper" />
@@ -432,6 +395,23 @@
 
         <!-- Wallpapers -->
 
+        <div id="amber" class="container-overlay overlay">
+          <a onclick="window.history.go(-1)" title="Close" class="button button-close"></a>
+          <div class="card-popup">
+            <h2 class="popup-title">Amber</h2>
+          </div>
+          <div class="card-popup">
+            <p class="popup-description">
+              Abstract color waves in warm colors, modified version of Lava after feedback from GNOME Design team, made
+              with mesh gradient tool in Inkscape.
+            </p>
+          </div>
+          <div class="card-popup">
+            <img class="popup-image wallpaper-big" src="img/wallpapers/amber.webp" alt="Amber wallpaper" />
+            <img class="popup-image wallpaper-big" src="img/wallpapers/amber-dark.webp" alt="Amber wallpaper" />
+          </div>
+        </div>
+
         <div id="crash" class="container-overlay overlay">
           <a onclick="window.history.go(-1)" title="Close" class="button button-close"></a>
           <div class="card-popup">
@@ -500,6 +480,52 @@
       </div>
     </div>
   </div>
+
+  <script>
+    // Close modal when esc key is pressed
+    window.onkeydown = function (event) {
+      if (event.key == "Escape")
+        window.history.go(-1);
+    };
+
+    // Check if the modal is open and disable scroll, otherwise enable it
+    function checkModalState() {
+      var hash = window.location.hash;
+      var hashText = hash.slice(1);
+
+      if (hashText.length > 0) {
+        // Text exists after the hash symbol
+        // console.log('Text after the hash: ' + hashText); // Debug
+        pageScrollOff();
+      } else {
+        // No text after the hash symbol
+        // console.log('No text after the hash.'); // Debug
+        pageScrollOn();
+      }
+    };
+
+    // Check if the modal is open on page load
+    window.onload = function () {
+      checkModalState();
+    };
+
+    // Check if the modal is open and disable scroll, otherwise enable it
+    window.onhashchange = function () {
+      checkModalState();
+    };
+
+    // Function to disable page scrolling
+    function pageScrollOff() {
+      document.body.style.overflow = 'hidden';
+      document.documentElement.style.overflow = 'hidden';
+    };
+
+    // Function to enable page scrolling
+    function pageScrollOn() {
+      document.body.style.overflowY = '';
+      document.documentElement.style.overflowY = '';
+    };
+  </script>
 
 
 </body>
