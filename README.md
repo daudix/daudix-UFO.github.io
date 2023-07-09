@@ -1,3 +1,6 @@
+> **Warning**
+> This repository has been moved to [Codeberg](https://codeberg.org/daudix-UFO/pages), all future work will continue there.
+
 ![Screenshot](screenshot.png)
 
 # daudix-ufo.github.io
